@@ -1,0 +1,952 @@
+@font-face {
+    font-family: 'Safira';
+    src: url(./Safira\ March\ Personal\ Use\ Only.ttf);
+}
+
+@font-face {
+    font-family: 'GrandSlang';
+    src: url(./61b74e971b09addb30f728b3_GrandSlang-Roman.woff);
+}
+
+@font-face {
+    font-family: 'GrandSlang2';
+    src: url(./61b74e803fc3c6e1863f2b86_GrandSlang-B-Side.woff);
+}
+
+@font-face {
+    font-family: 'GrandSlang3';
+    src: url(./61b74e924ab2ec20d3c3021a_GrandSlang-Italic.woff);
+}
+
+@font-face {
+    font-family: 'GrandSlang4';
+    src: url(./6224bdbcfca782c2dcc6171e_PPMigra-ExtraboldItalic.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    cursor: none !important;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+
+}
+
+/* \\\\\---------- Cursor ----------- ///// */
+
+.cursor {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+}
+
+::selection {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* \\\\\---------- Header -----------///// */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 10px 0px;
+}
+
+nav ul li {
+    padding: 20px 20px 10px 20px;
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    outline-offset: 1px solid white;
+    /* border: solid gold; */
+}
+
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #ffffff;
+    transition: all 0.6s ease-in-out;
+    transform: scaleX(0);
+}
+
+#list1:hover::after {
+    transform: scaleX(0.6);
+}
+
+#list2:hover::after {
+    transform: scaleX(0.5);
+}
+
+#list3:hover::after {
+    transform: scaleX(0.6);
+}
+
+#list4:hover::after {
+    transform: scaleX(0.7);
+}
+
+#list5:hover::after {
+    transform: scaleX(0.5);
+}
+
+#list6:hover::after {
+    transform: scaleX(0.6);
+}
+
+/* \\\\\---------- Home ----------- /////  */
+
+.hero {
+    height: 37rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, black, transparent, transparent);
+
+}
+
+.circle {
+    width: 120%;
+    height: 40rem;
+    position: absolute;
+    top: 5rem;
+    border-radius: 100%;
+    box-shadow: 0px 20px 30px -20px rgb(255, 255, 255);
+    transform: translate(-10%);
+}
+
+.pic {
+    height: 40rem;
+    width: 70%;
+    background-image: url(./hero.webp);
+    background-size: cover;
+    background-position: 0rem 0rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.hero #head {
+    font-weight: 200;
+    font-size: 6rem;
+    margin-top: 5rem;
+}
+
+.hero h1 span {
+    font-weight: 500;
+    margin-left: 30rem;
+    font-family: 'GrandSlang2';
+
+}
+
+/* \\\\\---------- About ----------- /////  */
+
+.about {
+    width: 100%;
+    height: 50rem;
+    color: white;
+    border-top-right-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.des {
+    width: 50%;
+}
+
+.head1 h1 {
+    font-family: 'GrandSlang2';
+    font-weight: 400;
+    font-size: 15rem;
+    text-align: center;
+    margin-top: 10rem;
+    white-space: nowrap;
+    transform: translateX(-30%);
+}
+
+.des p {
+    margin-bottom: 2rem;
+}
+
+.pic2 {
+    height: 30rem;
+    width: 30rem;
+    background-image: url(./hero2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+}
+
+.head2 h1 {
+    font-family: 'GrandSlang2';
+    font-weight: 400;
+    font-size: 15rem;
+    text-align: center;
+    margin-top: 10rem;
+    white-space: nowrap;
+    transform: translateX(-30%);
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn1 {
+    padding: 10px 25px;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid #ffffff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer !important;
+}
+
+#btn1::after {
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(50px);
+    border-radius: 30px;
+}
+
+#btn1:hover::after {
+    content: "Download CV";
+    transform: translateY(0px);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* \\\\\---------- Education ----------- ///// */
+
+.edu {
+    width: 100%;
+    height: 65rem;
+    padding: 30px 60px;
+
+}
+
+.box1 {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+    margin-top: 3rem;
+}
+
+.box2 {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+    margin-top: 3rem;
+}
+
+.box3 {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+    margin-top: 3rem;
+}
+
+.box4 {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+    margin-top: 3rem;
+}
+
+.year {
+    width: 5rem;
+}
+
+.grade {
+    width: 35rem;
+}
+
+.inst {
+    width: 18rem;
+}
+
+.sub {
+    width: 14rem;
+}
+
+.marks {
+    width: 5rem;
+}
+
+.year p {
+    font-weight: 600;
+}
+
+.grade p {
+    font-size: 5rem;
+    font-family: 'GrandSlang2';
+}
+
+.marks p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'GrandSlang4';
+    letter-spacing: 2px;
+}
+
+/* \\\\\---------- Experience ----------- /////  */
+
+.experience {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: solid red; */
+    overflow: hidden;
+}
+
+.text {
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    font-weight: 400;
+    padding: 30px 30px;
+}
+
+.text span span {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 18rem;
+}
+
+.text span {
+    font-family: 'GrandSlang2';
+    letter-spacing: 20px;
+    font-size: 15rem;
+    line-height: 12.5rem;
+    width: 30rem;
+}
+
+.overflow {
+    overflow: hidden;
+    width: 128%;
+    height: 100dvh;
+}
+
+.cards {
+    height: 220rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-100px);
+}
+
+.card1 {
+    border: 90px solid rgb(0, 0, 0);
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(7, 80px);
+    grid-gap: 2px;
+    overflow: hidden;
+    border: 1px solid white;
+    color: #ffffff;
+}
+
+#container span {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    overflow: hidden;
+}
+
+#container span::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.description {
+    position: absolute;
+    background: none;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+
+.description p {
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.description h2 {
+    font-weight: 500;
+}
+
+.description h3 {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.description h1 {
+    font-family: 'GrandSlang';
+    font-weight: 400;
+    font-size: 3.8rem;
+}
+
+.description h1:hover {
+    transform: scale(1);
+}
+
+.card2 {
+    border: 90px solid rgb(0, 0, 0);
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+}
+
+#container2 {
+    display: grid;
+    grid-template-columns: repeat(7, 80px);
+    grid-gap: 2px;
+    overflow: hidden;
+    border: 1px solid white;
+    color: #ffffff;
+
+}
+
+#container2 span {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    overflow: hidden;
+}
+
+#container2 span::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.description2 {
+    position: absolute;
+    background: none;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+
+.description2 p {
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.description2 h2 {
+    font-weight: 500;
+}
+
+.description2 h3 {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.description2 h1 {
+    font-family: 'GrandSlang';
+    font-weight: 400;
+    font-size: 3.8rem;
+}
+
+.description2 h1:hover {
+    transform: scale(1);
+}
+
+.card3 {
+    border: 90px solid rgb(0, 0, 0);
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+}
+
+#container3 {
+    display: grid;
+    grid-template-columns: repeat(7, 80px);
+    grid-gap: 2px;
+    overflow: hidden;
+    border: 1px solid white;
+    color: #ffffff;
+
+}
+
+#container3 span {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    overflow: hidden;
+}
+
+#container3 span::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.description3 {
+    position: absolute;
+    background: none;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+
+.description3 p {
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.description3 h2 {
+    font-weight: 500;
+}
+
+.description3 h3 {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.description3 h1 {
+    font-family: 'GrandSlang';
+    font-weight: 400;
+    font-size: 3.8rem;
+}
+
+.description3 h1:hover {
+    transform: scale(1);
+}
+
+.card4 {
+    border: 90px solid rgb(0, 0, 0);
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+}
+
+#container4 {
+    display: grid;
+    grid-template-columns: repeat(7, 80px);
+    grid-gap: 2px;
+    overflow: hidden;
+    border: 1px solid white;
+    color: #ffffff;
+
+}
+
+#container4 span {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    overflow: hidden;
+}
+
+#container4 span::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.description4 {
+    position: absolute;
+    background: none;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+
+.description4 p {
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.description4 h2 {
+    font-weight: 500;
+}
+
+.description4 h3 {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.description4 h1 {
+    font-family: 'GrandSlang';
+    font-weight: 400;
+    font-size: 3.8rem;
+}
+
+.description4 h1:hover {
+    transform: scale(1);
+}
+
+.card5 {
+    border: 90px solid rgb(0, 0, 0);
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+}
+
+#container5 {
+    display: grid;
+    grid-template-columns: repeat(7, 80px);
+    grid-gap: 2px;
+    overflow: hidden;
+    border: 1px solid white;
+    color: #ffffff;
+
+}
+
+#container5 span {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    overflow: hidden;
+}
+
+#container5 span::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.description5 {
+    position: absolute;
+    background: none;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+
+.description5 p {
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.description5 h2 {
+    font-weight: 500;
+}
+
+.description5 h3 {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.description5 h1 {
+    font-family: 'GrandSlang';
+    font-weight: 400;
+    font-size: 3.8rem;
+}
+
+.description5 h1:hover {
+    transform: scale(1);
+}
+
+/* \\\\\---------- Skills ----------- /////  */
+
+.skills {
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.head3 h1 {
+    font-family: 'GrandSlang2';
+    font-weight: 400;
+    font-size: 15rem;
+    text-align: center;
+    margin-top: 10rem;
+    white-space: nowrap;
+    transform: translateX(-30%);
+}
+
+
+.skill {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    transform: scale(1.3);
+    transition: all 0.5s ease-in-out;
+}
+
+.skill1 {
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.skill1 h1 {
+    font-family: 'Grandslang2';
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    transform: scale(1.3);
+}
+
+.percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+.num {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.num h2 {
+    font-family: 'Grandslang';
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.num h2 span {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+
+svg circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+#skill1:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 0) / 100);
+    stroke: #ffffff;
+}
+
+#skill2:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 0) / 100);
+    stroke: #ffffff;
+}
+
+#skill3:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 0) / 100);
+    stroke: #ffffff;
+}
+
+/* \\\\\---------- Contact----------- /////  */
+
+.contact {
+    height: 30rem;
+    width: 100%;
+    /* border: solid red; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.head4 h1 {
+    font-family: 'GrandSlang2';
+    font-weight: 400;
+    font-size: 15rem;
+    text-align: center;
+    margin-top: 10rem;
+    white-space: nowrap;
+    transform: translateX(-30%);
+}
+
+.contact h1 {
+    font-family: 'Grandslang2';
+    line-height: 7rem;
+    font-weight: 400;
+}
+
+#first span {
+    font-size: 7rem;
+    font-family: 'Grandslang2';
+    font-weight: 400;
+    font-style: italic;
+}
+
+#first {
+    font-size: 4rem;
+}
+
+#last {
+    font-size: 10rem;
+}
+
+#message {
+    font-family: 'Grandslang2';
+    text-align: right;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.phrase {
+    width: 49rem;
+}
+
+/* \\\\\---------- Footer ----------- ///// */
+
+footer {
+    padding: 10px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#icon {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon:hover {
+    cursor: pointer !important;
+}
+
+#icon i {
+    color: #000000;
+    font-size: 1.8rem;
+}
+
+.icons {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+
+}
