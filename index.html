@@ -12,31 +12,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body contextmenu="true">
+    <!-- \\\\\---------- Loader -----------///// -->
+
+    <div class="loader" id="loader">
+        <div class="loader-anim">
+            <div class="square square-1"></div>
+            <div class="square square-2"></div>
+            <div class="loader-circle"></div>
+        </div>
+        <div class="loader-text">Loading</div>
+        <div class="loader1"></div>
+    </div>
+
     <!-- \\\\\---------- Cursor -----------///// -->
 
     <div class="cursor"></div>
 
-    <div id="main ">
+    <div id="main">
 
         <!-- \\\\\---------- Header -----------///// -->
 
         <nav>
-            <ul>
-                <li id="list1">Home</li>
-                <li id="list2">About</li>
-                <li id="list3">Education</li>
-                <li id="list4">Experience</li>
-                <li id="list5">Skills</li>
-                <li id="list6">Contact</li>
-            </ul>
+            <div class="offmenu">
+                <ul>
+                    <li id="list1">Home</li>
+                    <li id="list2">About</li>
+                    <li id="list3">Education</li>
+                    <li id="list4">Experience</li>
+                    <li id="list5">Skills</li>
+                    <li id="list6">Contact</li>
+                </ul>
+            </div>
+            <div class="onmenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
+
 
         <!-- \\\\\---------- Home -----------///// -->
 
         <div class="hero">
             <div class="pic"></div>
-            <h1 id="head">Hello, I'm <span>Basit Ali</span></h1>
+            <h1 id="head" data-scroll data-scroll-speed="1">Hello, I'm <span>Basit Ali</span></h1>
         </div>
         <div class="circle"></div>
 
@@ -45,7 +65,7 @@
             <h1>ABOUT ⋅ ABOUT</h1>
         </div>
         <div class="about">
-            <div class="pic2" id="card" data-scroll data-scroll-speed="1"></div>
+            <div class="pic2" id="card"></div>
             <div class="des" data-scroll data-scroll-speed="1">
 
                 <p>Hello ! Its me Basit Ali, a dedicated and motivated Bachelor of Business
@@ -63,7 +83,7 @@
                 </p>
             </div>
         </div>
-        <div class="button">
+        <div class="button1">
             <a href="./Basit Ali..pdf" download=""><button id="btn1"><span>Download CV</span></button></a>
         </div>
 
@@ -336,6 +356,7 @@
                 © Basit Ali 2025
             </div>
         </footer>
+
     </div>
 
 
